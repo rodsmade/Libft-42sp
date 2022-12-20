@@ -1,5 +1,13 @@
 #include "libft.h"
 
+/**
+ * @brief Allocates memory (with malloc(3)) for a new string that is the result
+ * of concatenating a prefix string 's1' with a suffix string 's2'.
+ * 
+ * @param s1 A prefix string
+ * @param s2 A suffix string
+ * @return char* A malloc'd string containing the resulting joined strings.
+ */
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*joint;

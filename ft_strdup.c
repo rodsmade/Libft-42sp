@@ -1,5 +1,11 @@
 #include "libft.h"
 
+/**
+ * @brief Duplicates (using malloc(3)) the contents of a string 's'.
+ * 
+ * @param s a string.
+ * @return char* a pointer to the duplicate string.
+ */
 char	*ft_strdup(const char *s)
 {
 	unsigned int	strlength;

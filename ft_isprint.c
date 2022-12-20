@@ -1,3 +1,10 @@
+/**
+ * @brief Decides whether the character 'c' is a printable char as per the ASCII
+ * table.
+ * 
+ * @param c the char to be investigated
+ * @return int 0 if not, a positive value otherwise
+ */
 int	ft_isprint(int c)
 {
 	if (c == ' ')

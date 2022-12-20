@@ -1,5 +1,11 @@
 #include "libft.h"
 
+/**
+ * @brief Writes the number 'n' to the file descriptor specified in 'fd'.
+ * 
+ * @param n an integer
+ * @param fd a file descriptor in which to write the string
+ */
 void	ft_putnbr_fd(int n, int fd)
 {
 	unsigned int	number;

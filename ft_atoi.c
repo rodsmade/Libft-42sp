@@ -1,5 +1,11 @@
 #include "libft.h"
 
+/**
+ * @brief Parses a string into an integer number between MAX_INT and MIN_INT.
+ * 
+ * @param nptr a string containing a numeric sequence
+ * @return int the resulting converted integer number
+ */
 int	ft_atoi(const char *nptr)
 {
 	int	number;

@@ -59,18 +59,31 @@ char	**write_words(char **morsels, const char *s, char delimiter)
 	return (morsels);
 }
 
-char	**ft_split(char const *s, char delimiter)
+/**
+ * @brief Allocates memory (with malloc(3)) and returns an array of strings
+ * that is the result of splitting the original string 's' at every occurrence
+ * of the delimiting character 'c'. The table is NULL-terminated.
+ * E.g.: ft_split("Hello world, how is it going?", ' ') returns the following
+ * array of strings:
+ * { "Hello", "world,", "how", "is", "it", "going?", NULL }
+ * 
+ * @param s A string to be split in smaller strings
+ * @param c The delimiter character that marks the splitting points
+ * @return char** A NULL-terminated malloc'd array of strings as the result of the
+ * 	splitting process.
+ */
+char	**ft_split(char const *s, char c)
 {
-	char	**morsels;
-	size_t	words;
+	char	**arr;
+	size_t	word_count;
 
-	words = count_words(s, delimiter);
-	morsels = (char **) malloc((words + 1) * sizeof(char *));
-	if (morsels == NULL)
+	word_count = count_words(s, c);
+	arr = (char **) malloc((word_count + 1) * sizeof(char *));
+	if (arr == NULL)
 		return (NULL);
-	while (*s == delimiter && *s)
+	while (*s == c && *s)
 		s++;
-	morsels = write_words(morsels, s, delimiter);
-	morsels[words] = NULL;
-	return (morsels);
+	arr = write_words(arr, s, c);
+	arr[word_count] = NULL;
+	return (arr);
 }

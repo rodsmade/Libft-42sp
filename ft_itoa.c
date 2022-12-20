@@ -23,6 +23,13 @@ static size_t	count_digits(size_t n)
 	return (digits);
 }
 
+/**
+ * @brief Takes in an int and parses it into a string using malloc(3).
+ * E.g.: ft_itoa(-42) returns "-42".
+ * 
+ * @param n The int to be stringified.
+ * @return char* The resulting malloc'd string. Upon error, returns NULL.
+ */
 char	*ft_itoa(int n)
 {
 	char			*result;
