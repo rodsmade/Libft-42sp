@@ -44,19 +44,23 @@ SOURCES_B =	ft_lstadd_back.c \
 OBJECTS = $(SOURCES:.c=.o)
 OBJECTS_B = $(SOURCES_B:.c=.o)
 LIBFT_A = libft.a
+LIBFT_BONUS_A = libft_bonus.a
 CC = gcc
 FLAGS = -Wall -Wextra -Werror
 RM = rm -f
 
 all:	$(LIBFT_A)
 
-bonus:	$(LIBFT_A)
+bonus:	$(LIBFT_BONUS_A)
 
-$(LIBFT_A): $(OBJECTS) $(OBJECTS_B)
-	ar -rcs $(LIBFT_A) $(OBJECTS) $(OBJECTS_B)
+$(LIBFT_A): $(OBJECTS)
+	ar -rcs $(LIBFT_A) $(OBJECTS)
 
 $(OBJECTS):	$(SOURCES)
 	$(CC) $(FLAGS) -c $(SOURCES)
+
+$(LIBFT_BONUS_A): $(OBJECTS_B)
+	ar -rcs $(LIBFT_A) $(OBJECTS_B)
 
 $(OBJECTS_B):	$(SOURCES_B)
 	$(CC) $(FLAGS) -c $(SOURCES_B)
