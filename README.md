@@ -1,13 +1,13 @@
 # Libft-42sp
 
-This is the entry project at [École 42](https://www.youtube.com/watch?v=GDHhpy9ANpk&ab_channel=42TheNetwork), in which students are challenged to recreate a set of functions from the classic standardized libC library and other supplementary functions. These functions will then be used throughout the course of the school's curriculum, instead of the standard ones.
+This is the entry project at [École 42](https://www.youtube.com/watch?v=GDHhpy9ANpk&ab_channel=42TheNetwork), in which students are challenged to recreate a set of functions from the classic standardised libC, and other supplementary functions. These functions will then be used throughout the school's curriculum, instead of the standard ones.
 
 The bonus part of this project comprises functions for the manipulation of singly linked lists.
 
-This project is also the first contact we have with `make` and `Makefile`, and the deliverable is the static library file `libft.a`.
+This project is also the first contact we have with `make` and `Makefile`, and besides the source code for each function and a Makefile, another deliverable is the static library file `libft.a`.
 
 ## Functions
-The functions written for libft can be clustered in 6 groups:
+The functions written for `libft` can be clustered in 6 groups:
 
 | Cluster | Functions |
 |---|---|
