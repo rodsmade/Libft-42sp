@@ -16,9 +16,9 @@ The functions written for `libft` can be clustered in 6 groups:
 | string manipulation | `ft_strlcat`, `ft_strlcpy`, `ft_atoi`, `ft_strnstr`, `ft_strncmp`, `ft_strchr`, `ft_strrchr`, `ft_strtrim`, `ft_split`, `ft_itoa`, :new: `ft_append_char`, :new: `ft_atoli`, :new: `ft_uitoa`, :new: `ft_uitohex`, :new: `ft_ulitohex` |
 | printing functions | `ft_putchar_fd`, `ft_putstr_fd`, `ft_putendl_fd`, `ft_putnbr_fd` |
 | iterative functions | `ft_strmapi`, :new: `ft_striteri` |
-| linked lists manipulation :star: | `ft_lstnew`, `ft_lstdelone`, `ft_lstclear`, `ft_lstadd_front`, `ft_lstadd_back`, `ft_lstsize`, `ft_lstlast`, `ft_lstiter`, `ft_lstmap`, :new: `ft_lst_remove_node` |
+| :star: linked lists manipulation | `ft_lstnew`, `ft_lstdelone`, `ft_lstclear`, `ft_lstadd_front`, `ft_lstadd_back`, `ft_lstsize`, `ft_lstlast`, `ft_lstiter`, `ft_lstmap`, :new: `ft_lst_remove_node` |
 
-*note: :star: represents bonus functions; :new: represents extra functions added past the original project submission.*
+*note: :star: represents bonus functions; :new: represents extra functions added afterwards, not part of the original project submission.*
 
 All prototypes can be found in `libft.h`. See each function file for documentation notes.
 
