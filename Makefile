@@ -42,6 +42,9 @@ SOURCES =	ft_append_char.c \
 			ft_uitoa.c \
 			ft_uitohex.c \
 			ft_ulitohex.c
+SOURCES :=	$(addprefix ./src/,$(SOURCES))
+OBJECTS = $(SOURCES:./src/%.c=./obj/%.o)
+
 SOURCES_B =	ft_lst_remove_node.c \
 			ft_lstadd_back.c \
 			ft_lstadd_front.c \
@@ -52,35 +55,43 @@ SOURCES_B =	ft_lst_remove_node.c \
 			ft_lstnew.c \
 			ft_lstsize.c \
 			ft_lstmap.c
-OBJECTS = $(SOURCES:.c=.o)
-OBJECTS_B = $(SOURCES_B:.c=.o)
-LIBFT_A = libft.a
-LIBFT_BONUS_A = libft_bonus.a
+SOURCES_B :=	$(addprefix ./src/bonus/,$(SOURCES_B))
+OBJECTS_B = $(SOURCES_B:./src/%.c=./obj/%.o)
+
+NAME = libft.a
+NAME_B = libft_bonus.a
 CC = gcc
 FLAGS = -Wall -Wextra -Werror
 RM = rm -f
 
-all:	$(LIBFT_A)
+all:	mk_objdir $(NAME)
 
-bonus:	$(LIBFT_BONUS_A)
+mk_objdir:
+	mkdir -p obj
 
-$(LIBFT_A): $(OBJECTS)
-	ar -rcs $(LIBFT_A) $(OBJECTS)
+bonus:	mk_objdir_b $(NAME_B)
 
-$(OBJECTS):	$(SOURCES)
-	$(CC) $(FLAGS) -c $(SOURCES)
+mk_objdir_b:
+	mkdir -p obj/bonus
 
-$(LIBFT_BONUS_A): $(OBJECTS_B)
-	ar -rcs $(LIBFT_A) $(OBJECTS_B)
+$(NAME): $(OBJECTS)
+	ar -rcs $(NAME) $(OBJECTS)
 
-$(OBJECTS_B):	$(SOURCES_B)
-	$(CC) $(FLAGS) -c $(SOURCES_B)
+obj/%.o: src/%.c
+	$(CC) $(FLAGS) -I ./include -c $< -o $@
+
+$(NAME_B): $(OBJECTS_B)
+	ar -rcs $(NAME_B) $(OBJECTS_B)
+
+obj/bonus/%.o: src/bonus/%.c
+	$(CC) $(FLAGS) -I ./include -c $< -o $@
+
 
 clean:
 	$(RM) $(OBJECTS) $(OBJECTS_B)
 
 fclean: clean
-	$(RM) $(LIBFT_A)
+	$(RM) $(NAME) $(NAME_B)
 
 re: fclean all
 
