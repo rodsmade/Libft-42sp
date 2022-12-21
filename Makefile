@@ -1,10 +1,16 @@
-SOURCES =	ft_atoi.c \
+SOURCES =	ft_append_char.c \
+			ft_atoi.c \
+			ft_atoli.c \
 			ft_bzero.c \
 			ft_calloc.c \
+			ft_free_arr.c \
+			ft_free_ptr.c \
+			ft_is_blankspace.c \
 			ft_isalnum.c \
 			ft_isalpha.c \
 			ft_isascii.c \
 			ft_isdigit.c \
+			ft_isnumeric_str.c \
 			ft_isprint.c \
 			ft_itoa.c \
 			ft_memccpy.c \
@@ -20,6 +26,7 @@ SOURCES =	ft_atoi.c \
 			ft_split.c \
 			ft_strchr.c \
 			ft_strdup.c \
+			ft_striteri.c \
 			ft_strjoin.c \
 			ft_strlcat.c \
 			ft_strlcpy.c \
@@ -31,8 +38,12 @@ SOURCES =	ft_atoi.c \
 			ft_strtrim.c \
 			ft_substr.c \
 			ft_tolower.c \
-			ft_toupper.c
-SOURCES_B =	ft_lstadd_back.c \
+			ft_toupper.c \
+			ft_uitoa.c \
+			ft_uitohex.c \
+			ft_ulitohex.c
+SOURCES_B =	ft_lst_remove_node.c \
+			ft_lstadd_back.c \
 			ft_lstadd_front.c \
 			ft_lstclear.c \
 			ft_lstdelone.c \
