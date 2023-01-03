@@ -58,3 +58,8 @@ Hello world!
 Powered by Libft.
 $>
 ```
+
+## Final note
+As I studied for this project (and even further on as I progressed in the programme and better understood the basal concepts introduced here), I wrote this sort of guide/commentary on the project, and have since been sharing it with other fellow students of 42 in the hopes of presenting the delimitation of the subjects covered in this project (for it is known to be overwhelming at first, I've been there!), and also pointing a more clear and well-defined direction where to begin when starting off on this project. If need be, please check it out. It's written in Portuguese :cactus:
+
+[Acelera - Libft](https://www.notion.so/rodsmade/Acelera-Libft-8874a01f188a4671ae503fe9e99056ab)
