@@ -12,7 +12,7 @@ The functions written for `libft` can be clustered in 6 groups:
 | Cluster | Functions |
 |---|---|
 | ASCII symbols validation and transformation | `ft_isalpha`, `ft_isdigit`, `ft_isalnum`, `ft_isascii`, `ft_isprint`, `ft_toupper`, `ft_tolower`, :new: `ft_is_blankspace`, :new: `ft_isnumeric_str.c` |
-| printing functions | `ft_putchar_fd`, `ft_putstr_fd`, `ft_putendl_fd`, `ft_putnbr_fd` |
+| (thread-safe) printing functions | `ft_putchar_fd`, `ft_putstr_fd`, `ft_putendl_fd`, `ft_putnbr_fd` |
 | memory allocation and manipulation | `ft_memcpy`, `ft_memset`, `ft_bzero`, `ft_memmove`, `ft_memcmp`, `ft_memchr`, `ft_calloc`, `ft_strdup`, `ft_substr`, `ft_strjoin`, :new: `ft_free_arr`, :new: `ft_free_ptr` |
 | string manipulation | `ft_strlen`, `ft_strlcat`, `ft_strlcpy`, `ft_atoi`, `ft_strnstr`, `ft_strncmp`, `ft_strchr`, `ft_strrchr`, `ft_strtrim`, `ft_split`, `ft_itoa`, :new: `ft_append_char`, :new: `ft_atoli`, :new: `ft_uitoa`, :new: `ft_uitohex`, :new: `ft_ulitohex` |
 | iterative functions | `ft_strmapi`, :new: `ft_striteri` |
